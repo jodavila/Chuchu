@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Sistema Banco</title>
+	<style> body { background-color: #f5f5f5; } </style>
+</head>
+<body>	<!-- Fixed navbar -->
+	<div class="navbar navbar-fixed-top navbar-inverse" style='margin-top:-2px;'>
+	  <div class="navbar-inner">
+		<div class="container">
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li class='active'><a class="brand" href="#" ><i class='icon-book'></i>Sistema</a></li>
+				</ul>
+				<ul class="nav pull-right">
+					<li class='active' style='margin-top:2px;'><a href="login.html" ><i class="icon-user"></i>&nbsp; Login &nbsp; </a></li>
+				</ul>
+				<ul class="nav pull-right">
+					<li class='active' style='margin-top:2px;'><a href="home.html" ><i class="icon-user"></i>&nbsp; Inicio &nbsp; </a></li>
+				</ul>
+				<ul class="nav pull-right">
+					<li class='active' style='margin-top:2px;'><a href="perfil.html" ><i class="icon-user"></i>&nbsp; Perfil &nbsp; </a></li>
+				</ul>
+				<ul class="nav pull-right">
+					<li class='active' style='margin-top:2px;'><a href="#" ><i class="icon-user"></i>&nbsp; Operações &nbsp; </a></li>
+				</ul>
+            </div>
+		</div>
+	  </div>
+	</div>
+	<!-- end of fixed Nav bar--> 	
+
+    <div class="container">
+	    <br>
+        <div class="row " >
+            <div class="span3"></div>
+            <div id="login" class="span6 well" style='background :white; border:1px silver solid;'>
+            <h4>Transferência entre contas</h4>
+		    <form>
+                <label for="contaO"> Conta:    </label> 
+                <input/type="number"/class="input-block-level"/placeholder="ContaUsuario"/name="contaO"> 
+                <br>
+
+				<label for="valor"> Valor R$:    </label> 
+                <input/type="number"/class="input-block-level"/placeholder="100,00"/name="valor"> 
+                <br>
+
+				<label for="contaD"> Conta Destino: </label> 
+                <input/type="number"/class="input-block-level"/placeholder="contaDestino"/name="contaD"> 
+                <br>
+
+				<label for="descricao"> Descrição: </label> 
+                <input/type="text"/class="input-block-level" placeholder="Relacionado a assunto X" max="100" name="descricao"> 
+                <br>
+
+				<b><span id='notification'></span></b>
+				<center>
+					<input class="btn btn-primary" id="search" type="submit" value = "OK" style="margin-top:20px;"/>
+					<input class="btn btn-cancel" id="cancel" type="cancel" value = "Cancelar" style="margin-top:20px;"/>
+				</center>
+            </form>
+            </div>
+        </div>
+	</div>
+</body>
+</html>
