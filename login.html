@@ -2,65 +2,76 @@
 <html>
 <head>
 	<title> Sistema Banco</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="assets/css/fontawesome/css/font-awesome.min.css" media="all" /> 
+	<link rel="stylesheet" type="text/css" href="assets/css/application.css" media="screen">
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/analytics.js"></script>
 	<style> body { background-color: #f5f5f5; } </style>
 </head>
 <body>	<!-- Fixed navbar -->
-	<div class="navbar navbar-fixed-top navbar-inverse" style='margin-top:-2px;'>
-	  <div class="navbar-inner">
-		<div class="container">
-			<div class="nav-collapse collapse">
-				<ul class="nav">
-					<li class='active'><a class="brand" href="#" ><i class='icon-book'></i>Sistema</a></li>
-				</ul>
-				<ul class="nav pull-right">
-					<li class='active' style='margin-top:2px;'><a href="#" ><i class="icon-user"></i>&nbsp; Login &nbsp; </a></li>
-				</ul>
-				<ul class="nav pull-right">
-					<li class='active' style='margin-top:2px;'><a href="home.html" ><i class="icon-user"></i>&nbsp; Inicio &nbsp; </a></li>
-				</ul>
-				<ul class="nav pull-right">
-					<li class='active' style='margin-top:2px;'><a href="perfil.html" ><i class="icon-user"></i>&nbsp; Perfil &nbsp; </a></li>
-				</ul>
-				<ul class="nav pull-right">
-					<li class='active' style='margin-top:2px;'><a href="operacao.html" ><i class="icon-user"></i>&nbsp; Operações &nbsp; </a></li>
-				</ul>
-            </div>
-		</div>
-	  </div>
-	</div>
-	<!-- end of fixed Nav bar--> 	
-
-    <div class="container">
-	    <br>
-        <div class="row " >
-            <div class="span3"></div>
-            <div id="login" class="span6 well" style='background :white; border:1px silver solid;'>
-            <h4>Acesso</h4>
-            <center>
-                <form>
-
-				<label for="Nome"> Nome</label> 
-                <input/type="text"/class="input-block-level"/placeholder="NomeSobrenome"/name="nome"> 
-                <br>
-
-                <label for="valor"> E-mail</label> 
-                <input/type="text"/class="input-block-level"/placeholder="algo@local"/name="email"> 
-                <br>
-
-                <label for="senhaN"> Senha: </label> 
-                <input/type="password"/class="input-block-level"/placeholder="novasenha"/name="senhaN"> 
-                <br>
+	<div class="navbar navbar-fixed-top" style='margin-top:-2px;'>
+		<div class="navbar-inner">
+			<div class="container">
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class='btn-default'><a class="brand" href="home.html" ><i class='icon-book'></i>Sistema</a></li>
+					</ul>
 
 
-				<b><span id='notification'></span></b>
-					<input class="btn btn-primary" id="enviar" type="submit" value = "Acessar" style="margin-top:20px;"/>
-					<input class="btn btn-primary" id="novo" type="submit" value = "Cadastrar" style="margin-top:20px;"/>
-					<input class="btn btn-cancel" id="cancel" type="cancel" value = "Cancelar" style="margin-top:20px;"/>
+					<ul class="nav pull-right">
+						<li class='btn-default' style='margin-top:2px;'><a href="login.html" ><i class="icon-user"></i>&nbsp; Login &nbsp; </a></li>
+					</ul>
+					<ul class="nav pull-right">
+						<li class='btn-default' style='margin-top:2px;'><a href="perfil.html" ><i class="icon-user"></i>&nbsp; Perfil &nbsp; </a></li>
+					</ul>
+					
+					<ul class="nav pull-right">
+						<li class='btn-default' style='margin-top:2px;'><a href="operacao.html" ><i class="icon-user"></i>&nbsp; Operações &nbsp; </a></li>
+					</ul>
+					<ul class="nav pull-right">
+						<li class='btn-default' style='margin-top:2px;'><a href="home.html" ><i class="icon-user"></i>&nbsp; Inicio &nbsp; </a></li>
+					</ul>
 				
-                </form>
-             </center>
-            </div>
-        </div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of fixed Nav bar--> 		
+	
+	<div class="container">
+		
+		<div class="row " >
+			<div class="span3"></div>
+			<div id="login" class="span6 well" style='background :white; border:1px silver solid;'>
+				<h4>Acesso</h4>
+				
+					<form>				
+						<div class="input-group">
+							<label for="Nome"> Nome</label> 
+							<input/type="text"/class="input-block-level/form-control"/placeholder="NomeSobrenome"/name="nome"> 
+						</div>
+						<div class="input-group">
+							<label for="valor"> E-mail</label> 
+							<input/type="text"/class="input-block-level/form-control"/placeholder="algo@local"/name="email"> 
+						</div>
+						<div class="input-group">						
+							<label for="senhaN"> Senha: </label> 
+							<input/type="password"/class="input-block-level/form-control"/placeholder="novasenha"/name="senhaN"> 
+						</div>
+						
+						<b><span id='notification'></span></b>
+						<input class="btn btn-success" id="enviar" type="submit" value = "Acessar" />
+						<input class="btn btn-primary" id="novo" type="submit" value = "Cadastrar" />
+						<br>
+						<input class="btn btn-default" id="cancel" type="cancel" value = "Cancelar" />
+						
+					</form>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

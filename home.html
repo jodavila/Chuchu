@@ -2,44 +2,71 @@
 <html>
 <head>
 	<title> Sistema Banco</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="assets/css/fontawesome/css/font-awesome.min.css" media="all" /> 
+	<link rel="stylesheet" type="text/css" href="assets/css/application.css" media="screen">
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/analytics.js"></script>
 	<style> body { background-color: #f5f5f5; } </style>
 </head>
 <body>	<!-- Fixed navbar -->
-	<div class="navbar navbar-fixed-top navbar-inverse" style='margin-top:-2px;'>
-	  <div class="navbar-inner">
-		<div class="container">
-			<div class="nav-collapse collapse">
-				<ul class="nav">
-					<li class='active'><a class="brand" href="#" ><i class='icon-book'></i>Sistema</a></li>
-				</ul>
-				<ul class="nav pull-right">
-					<li class='active' style='margin-top:2px;'><a href="login.html" ><i class="icon-user"></i>&nbsp; Login &nbsp; </a></li>
-				</ul>
-				<ul class="nav pull-right">
-					<li class='active' style='margin-top:2px;'><a href="#" ><i class="icon-user"></i>&nbsp; Inicio &nbsp; </a></li>
-				</ul>
-				<ul class="nav pull-right">
-					<li class='active' style='margin-top:2px;'><a href="perfil.html" ><i class="icon-user"></i>&nbsp; Perfil &nbsp; </a></li>
-				</ul>
-				<ul class="nav pull-right">
-					<li class='active' style='margin-top:2px;'><a href="operacao.html" ><i class="icon-user"></i>&nbsp; Operações &nbsp; </a></li>
-				</ul>
-            </div>
+	<div class="navbar navbar-fixed-top" style='margin-top:-2px;'>
+		<div class="navbar-inner">
+			<div class="container">
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class='btn-default'><a class="brand" href="home.html" ><i class='icon-book'></i>Sistema</a></li>
+					</ul>
+
+					<ul class="nav pull-right">
+						<li class='btn-default' style='margin-top:2px;'><a href="login.html" ><i class="icon-user"></i>&nbsp; Login &nbsp; </a></li>
+					</ul>
+					<ul class="nav pull-right">
+						<li class='btn-default' style='margin-top:2px;'><a href="perfil.html" ><i class="icon-user"></i>&nbsp; Perfil &nbsp; </a></li>
+					</ul>
+					
+					<ul class="nav pull-right">
+						<li class='btn-default' style='margin-top:2px;'><a href="operacao.html" ><i class="icon-user"></i>&nbsp; Operações &nbsp; </a></li>
+					</ul>
+					<ul class="nav pull-right">
+						<li class='btn-default' style='margin-top:2px;'><a href="home.html" ><i class="icon-user"></i>&nbsp; Inicio &nbsp; </a></li>
+					</ul>
+				
+				</div>
+			</div>
 		</div>
-	  </div>
 	</div>
 	<!-- end of fixed Nav bar--> 	
-
-    <div class="container">
-	     <div class="row " >
-            <div class="span3"></div>
-            <div id="login" class="span6 well" style='background :white; border:1px silver solid;'>
-            <h4>Detalhes</h4>
-		     <a> 
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt ultricies dui pharetra tempus. Curabitur facilisis erat justo, non imperdiet mi pharetra commodo. Integer et augue eget libero ornare rutrum. Mauris in interdum erat. Etiam convallis venenatis nisl ac euismod. Maecenas blandit, erat eu convallis dapibus, dui elit laoreet arcu, in accumsan ligula justo nec urna. Nunc pulvinar id felis sed sodales. Phasellus imperdiet sollicitudin dui ac pretium. Phasellus in nisi a ante venenatis bibendum eget eu odio. In accumsan neque at est mollis, vestibulum sodales felis placerat. Proin in dolor elementum, commodo urna eu, tincidunt massa. Integer finibus arcu id augue tristique molestie. Cras gravida tortor elit, eget imperdiet libero mattis et. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-			</a>
-            </div>
-        </div>
+	
+	<div class="container">
+		<div class="row " >
+			<div class="span3"></div>
+			<div id="login" class="span6 well" style='background :white; border:1px silver solid;'>
+				<h4>Detalhes</h4>
+				<span> Projeto desenvolvido durante o curso de web hacking </span>
+				
+			</div>
+		</div>
+		<div class="row " >
+			
+		</div>
 	</div>
+
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
+			
+			<a class="navbar-brand" href="https://github.com/jodavila/Chuchu">
+				<img src="assets/img/GitHub.png" alt="GitHub" width="70" height="70"  >
+			</a>
+			<a class="navbar-brand" href="https://www.cysource.com.br/">
+				<img src="assets/img/cysource.png" alt="cysource" width="70" height="70" class="img-circle" >
+			</a>
+			<a class="navbar-brand" href="https://www.inf.ufrgs.br/site/noticia/curso-pentest-em-aplicacoes-web/">
+				<img src="https://www.inf.ufrgs.br/site/wp-content/uploads/2017/09/logo-inf-200x115.jpg" alt="inf" style='border:1px lightslategrey solid;' width="70" height="70" class="img-circle" >
+			</a>
+		</div>
+	</nav>
+	
 </body>
 </html>
