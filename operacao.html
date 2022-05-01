@@ -2,12 +2,17 @@
 <html>
 <head>
 	<title> Sistema Banco</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="assets/css/fontawesome/css/font-awesome.min.css" media="all" /> 
-	<link rel="stylesheet" type="text/css" href="assets/css/application.css" media="screen">
-	<script src="assets/js/jquery.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/analytics.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-widht, initial-scale=1">
+
+	<!-- 	<link rel="stylesheet" type="text/css" href="../project/assets/css/bootstrap.min.css" media="screen"> -->
+	<link rel="stylesheet" type="text/css" href="../project/assets/css/bootstrap.min.css" media="screen">
+	x<link rel="stylesheet" type="text/css" href="../project/assets/css/fontawesome/css/font-awesome.min.css" media="all" /> 
+	<link rel="stylesheet" type="text/css" href="../project/assets/css/application.css" media="screen">
+	<script src="../project/assets/js/jquery.js"></script> 
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.im.js"></script> -->
+	<script src="../project/assets/js/bootstrap.min.js"></script>
+	<script src="../project/assets/js/analytics.js"></script>
 	<style> body { background-color: #f5f5f5; } </style>
 </head>
 <body>	<!-- Fixed navbar -->
@@ -67,8 +72,17 @@
 					
 					<b><span id='notification'></span></b>
 					<center>
-						<input class="btn btn-primary" id="search" type="submit" value = "OK"/>
+						<input class="btn btn-primary" id="search" onclick="alert('Operação desativado');" type="submit" value = "OK"/>
 						<input class="btn btn-default" id="cancel" type="cancel" value = "Cancelar" />
+
+						<script>
+							$("#search").click(function(){
+								// $(".notification").toggle(); // faz ocular e se estiver oculto faz aparecer
+								$(".notification").text("Operação desativada. Espere as próximas versões."); // troca o conteudo
+								 
+							});
+						</script>
+
 					</center>
 				</form>
 			</div>
