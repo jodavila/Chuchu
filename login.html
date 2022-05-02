@@ -49,13 +49,14 @@
 			<div id="login" class="span6 well" style='background :white; border:1px silver solid;'>
 				<h4>Acesso</h4>
 				
-					<form>				
+				<form id="formL" method="post" action="api.php">
+				
 						<div class="input-group">
 							<label for="Nome"> Nome</label> 
 							<input/type="text"/class="input-block-level/form-control"/placeholder="NomeSobrenome"/name="nome"> 
 						</div>
 						<div class="input-group">
-							<label for="valor"> E-mail</label> 
+							<label for="email"> E-mail</label> 
 							<input/type="text"/class="input-block-level/form-control"/placeholder="algo@local"/name="email"> 
 						</div>
 						<div class="input-group">						
@@ -64,11 +65,37 @@
 						</div>
 						
 						<b><span id='notification'></span></b>
-						<input class="btn btn-success" id="enviar" type="submit" onclick="alert('Operação desativado');" svalue = "Acessar" />
-						<input class="btn btn-primary" id="novo" type="submit" onclick="alert('Operação desativada');" value = "Cadastrar" />
+						<input class="btn btn-success" id="enviar" type="submit" value = "Acessar" />
+						<input class="btn btn-primary" id="novo" type="submit" value = "Cadastrar" />
 						<br>
 						<input class="btn btn-default" id="cancel" type="cancel" value = "Cancelar" />
 						
+						<script>
+							/*
+							$("#formL").submit(function (e) {
+									e.preventDefault();
+									console.log($( this ).serialize());
+								});
+							*/
+							/*
+							$("#search").click(function(){
+								$("#notification").text("Operação desativada. Espere as próximas versões."); // troca o conteudo
+	
+								});
+							*/
+								$("#formL").submit(function (e) {
+								e.preventDefault();
+								var result = none;
+							
+								$.each($(this).serializeArray(), function() {
+									result[this.name] = this.value;
+								});
+							
+								console.log(result);
+							});
+							
+							</script>
+
 					</form>
 			</div>
 		</div>

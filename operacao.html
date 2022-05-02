@@ -50,7 +50,8 @@
 			<div class="span3"></div>
 			<div id="" class="span6 well" style='background :white; border:1px silver solid;'>
 				<h4>Transferência entre contas</h4>
-				<form>
+				<form id="formO" method="post" action="api.php">
+
 					<div class="input-group">						
 						<label for="contaO"> Conta:    </label> 
 						<input/type="number"/class="input-block-level/form-control"/placeholder="ContaUsuario"/name="contaO"> 
@@ -72,17 +73,35 @@
 					
 					<b><span id='notification'></span></b>
 					<center>
-						<input class="btn btn-primary" id="search" onclick="alert('Operação desativado');" type="submit" value = "OK"/>
+						<input class="btn btn-primary" id="search"   type="submit" value = "OK"/>
 						<input class="btn btn-default" id="cancel" type="cancel" value = "Cancelar" />
-
 						<script>
+							/*
+							$("#formO").submit(function (e) {
+									e.preventDefault();
+									console.log($( this ).serialize());
+								});
+	
+							*/
+							/*
 							$("#search").click(function(){
-								// $(".notification").toggle(); // faz ocular e se estiver oculto faz aparecer
-								$(".notification").text("Operação desativada. Espere as próximas versões."); // troca o conteudo
-								 
+								$("#notification").text("Operação desativada. Espere as próximas versões."); // troca o conteudo
+	
+								});
+							*/
+							
+								$("#formO").submit(function (e) {
+								e.preventDefault();
+								var result = none
+							
+								$.each($(this).serializeArray(), function() {
+									result[this.name] = this.value;
+								});
+							
+								console.log(result);
 							});
-						</script>
-
+							
+							</script>
 					</center>
 				</form>
 			</div>

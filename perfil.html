@@ -45,9 +45,9 @@
 			<div class="span3"></div>
 			<div id="login" class="span6 well" style='background :white; border:1px silver solid;'>
 				<h4>PERFIL</h4>
-				<form>
+				<form id="formP" method="post" action="api.php">
 					<div class="input-group">
-						<label for="contaO"> Conta: </label> 
+						<label for="conta0"> Conta: </label> 
 						<input/readonly/type="number"/class="input-block-level/form-control"/placeholder="ContaUsuario"/name="contaO"> 
 					</div>
 					<div class="input-group">			
@@ -70,9 +70,36 @@
 					
 					<b><span id='notification'></span></b>
 					<center>
-						<input class="btn btn-primary" id="search" type="submit" value = "OK" onclick="alert('Operação Desativado');" />
+						<input class="btn btn-primary" id="search" type="submit" value = "OK" />
 						<input class="btn btn-default" id="cancel" type="cancel" value = "Cancelar" />
 					</center>
+
+
+					<script>
+						/*
+						$("#formP").submit(function (e) {
+								e.preventDefault();
+								console.log($( this ).serialize());
+							});
+						*/
+						/*
+						$("#search").click(function(){
+							$("#notification").text("Operação desativada. Espere as próximas versões."); // troca o conteudo
+
+							});
+						*/
+						$("#formP").submit(function (e) {
+							e.preventDefault();
+							var result = none
+						
+							$.each($(this).serializeArray(), function() {
+								result[this.name] = this.value;
+							});
+						
+							console.log(result);
+						});
+						</script>
+
 				</form>
 			</div>
 		</div>
